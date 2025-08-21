@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  margin: 20px;
+}
+
+h2 {
+  color: #ff5722;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+thead {
+  background-color: #ff5722;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  min-width: 120px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff0e5;
+}
+
+tr:hover {
+  background-color: #ffe0b2;
+  transition: background-color 0.3s ease;
+}
+
+button, select, input {
+  padding: 6px 10px;
+  margin: 3px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#updateBtn {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+}
+
+.deleteBtn {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+#formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input, select {
+  min-width: 120px;
+}
+
+.highlight {
+  animation: highlightAnim 1s ease;
+}
+
+@keyframes highlightAnim {
+  0% { background-color: #ffff99; }
+  100% { background-color: inherit; }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #formContainer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+
+  td span {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
+
+  /* Horizontal scroll wrapper handles table overflow */
+  div[style*="overflow-x:auto;"] {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  td span {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+}
